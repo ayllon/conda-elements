@@ -1,8 +1,9 @@
 language: generic
 
 matrix:
-    - os: linux
-    - os: osx
+    include:
+        - os: linux
+        - os: osx
 
 before_install:
     # Remove homebrew
