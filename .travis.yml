@@ -4,6 +4,7 @@ matrix:
     include:
         - os: linux
         - os: osx
+          osx_image: xcode6.4
 
 before_install:
     # Remove homebrew
