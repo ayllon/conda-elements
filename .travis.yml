@@ -40,7 +40,7 @@ install:
     # Configure MacOSX SDK
     - |
         if [ "$TRAVIS_OS_NAME" = "osx" ]; then
-            echo -e "CONDA_BUILD_SYSROOT:\n\t- $(xcrun --sdk macosx --show-sdk-path) # [osx]" > $HOME/conda_build_config.yaml
+            echo -e "CONDA_BUILD_SYSROOT:\n    - $(xcrun --sdk macosx --show-sdk-path) # [osx]" > $HOME/conda_build_config.yaml
             cat $HOME/conda_build_config.yaml
         fi
 
