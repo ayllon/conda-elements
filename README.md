@@ -1,5 +1,7 @@
 # About Elements
 
+[![Build Status](https://travis-ci.org/astrorama/conda-elements.svg?branch=master)](https://travis-ci.org/astrorama/conda-elements)
+
 Home: https://github.com/astrorama/Elements.git
 
 Package license: LGPL 3.0
