@@ -33,7 +33,9 @@ install:
         source $HOME/miniconda3/bin/activate root
         conda config --add channels conda-forge
         conda config --add channels astrorama
-        conda config --add channels astrorama/label/dev
+        if [ "$TRAVIS_BRANCH" != "master" ]; then
+            conda config --add channels astrorama/label/develop
+        fi
         conda install --yes --quiet conda-build
         conda install --yes --quiet anaconda-client
 
@@ -47,7 +49,7 @@ install:
 script: |
     if [ "$TRAVIS_BRANCH" = "master" ]; then
         LABELS="main"
-    elif [ "$TRAVIS_PULL_REQUEST_BRANCH" = ""]; then
+    elif [ -z "$TRAVIS_PULL_REQUEST_BRANCH" ]; then
         LABELS="$TRAVIS_BRANCH"
     else
         LABELS="pr/$TRAVIS_PULL_REQUEST_BRANCH/$TRAVIS_BRANCH"
