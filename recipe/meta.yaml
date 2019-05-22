@@ -1,0 +1,37 @@
+package:
+    name: elements
+    version: "5.2.2"
+
+source:
+    git_rev: 5.2.2
+    git_url: https://github.com/astrorama/Elements.git
+
+build:
+    number: 1
+
+test:
+    commands:
+        - AddElementsModule --version
+
+requirements:
+    build:
+        - cmake >=3.0
+        - make
+        - {{ compiler('cxx') }}
+    host:
+        - boost-cpp
+        - log4cpp
+        - python
+        - pytest
+        - cython
+    run:
+        - boost-cpp
+        - log4cpp
+        - python
+        - pytest
+
+about:
+    home: https://github.com/astrorama/Elements.git
+    license: LGPL
+    summary: Elements is a C++/Python build framework. It helps to organize the software into modules which are gathered into projects.
+
