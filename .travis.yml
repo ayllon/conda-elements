@@ -33,7 +33,7 @@ install:
         conda config --add channels astrorama
         conda config --add channels astrorama/label/dev
         conda install --yes --quiet conda-build
-        conda install --yes --quiet anaconda
+        conda install --yes --quiet anaconda-client
 
 script: |
     if [ "$TRAVIS_BRANCH" = "master" ]; then
