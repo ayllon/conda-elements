@@ -1,0 +1,50 @@
+language: generic
+
+os:
+    - linux
+    - osx
+
+before_install:
+    # Remove homebrew
+    - |
+        if [ "$TRAVIS_OS_NAME" = "osx" ];
+            curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/uninstall > ~/uninstall_homebrew
+            chmod +x ~/uninstall_homebrew
+            ~/uninstall_homebrew -fq
+            rm ~/uninstall_homebrew
+        fi
+
+install:
+    # Install miniconda
+    - |
+        MINICONDA_URL="https://repo.continuum.io/miniconda"
+        if [ "$TRAVIS_OS_NAME" = "osx" ];
+            MINICONDA_FILE="Miniconda3-latest-MacOSX-x86_64.sh"
+        else
+            MINICONDA_FILE="Miniconda3-latest-Linux-x86_64.sh"
+        fi
+        curl -L -O "${MINICONDA_URL}/${MINICONDA_FILE}"
+        bash $MINICONDA_FILE -b
+
+    # Configure conda
+    - |
+        source $HOME/miniconda3/bin/activate root
+        conda config --add channels conda-forge
+        conda config --add channels astrorama
+        conda config --add channels astrorama/label/dev
+        conda install --yes --quiet conda-build
+        conda install --yes --quiet anaconda
+
+jobs:
+    include:
+        - stage: build
+          script: |
+            if [ "$TRAVIS_BRANCH" = "master" ]; then
+                LABELS="main"
+            elif [ "$TRAVIS_PULL_REQUEST_BRANCH" = ""]; then
+                LABELS="$TRAVIS_BRANCH"
+            else
+                LABELS="pr/$TRAVIS_PULL_REQUEST_BRANCH/$TRAVIS_BRANCH"
+            fi 
+            conda build --user astrorama ./recipe --token "$ANACONDA_TOKEN" --label "$LABELS"
+
