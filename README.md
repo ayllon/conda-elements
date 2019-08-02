@@ -1,6 +1,6 @@
 # About Elements
 
-[![Build Status](https://travis-ci.org/astrorama/conda-elements.svg?branch=master)](https://travis-ci.org/astrorama/conda-elements)
+[![Build Status](https://travis-ci.org/astrorama/conda-elements.svg?branch=release/5.2)](https://travis-ci.org/astrorama/conda-elements)
 
 Home: https://github.com/astrorama/Elements.git
 
