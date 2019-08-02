@@ -1,13 +1,13 @@
 package:
     name: elements
-    version: "5.8"
+    version: "5.2.2"
 
 source:
-    git_rev: 5.8
+    git_rev: 5.2.2
     git_url: https://github.com/astrorama/Elements.git
 
 build:
-    number: 2
+    number: 3
 
 test:
     commands:
