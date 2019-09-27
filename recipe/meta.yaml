@@ -19,13 +19,13 @@ requirements:
         - make
         - {{ compiler('cxx') }}
     host:
-        - boost-cpp
+        - boost-cpp ==1.70
         - log4cpp
         - python
         - pytest
         - cython
     run:
-        - boost-cpp
+        - boost-cpp ==1.70
         - log4cpp
         - python
         - pytest
