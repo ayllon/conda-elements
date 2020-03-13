@@ -7,7 +7,9 @@ source:
     git_url: https://github.com/astrorama/Elements.git
 
 build:
-    number: 5
+    number: 6
+    run_exports:
+        - {{ pin_subpackage('elements', max_pin='x.x.x') }}
 
 test:
     commands:
@@ -26,8 +28,8 @@ requirements:
         - cython
     run:
         - boost-cpp ==1.70
-        - log4cpp
-        - python
+        - {{ pin_compatible('log4cpp') }}
+        - {{ pin_compatible('python', min_pin='x.x', max_pin='x.x') }}
         - pytest
 
 about:
