@@ -1,5 +1,7 @@
 language: generic
 
+if: branch != master OR tag IS present
+
 matrix:
     include:
         - os: linux
@@ -48,7 +50,7 @@ install:
         fi
 
 script: |
-    if [ "$TRAVIS_BRANCH" = "master" ]; then
+    if [ -n "$TRAVIS_TAG" ]; then
         LABELS="main"
     elif [ -z "$TRAVIS_PULL_REQUEST_BRANCH" ]; then
         LABELS="$TRAVIS_BRANCH"
