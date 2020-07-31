@@ -7,7 +7,7 @@ source:
     git_url: https://github.com/astrorama/Elements.git
 
 build:
-    number: 3
+    number: 4
     run_exports:
         - {{ pin_subpackage('elements', max_pin='x.x.x') }}
 
