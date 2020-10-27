@@ -5,7 +5,7 @@ Home: https://github.com/astrorama/Elements.git
 
 Package license: LGPL
 
-Feedstock license: [BSD-3-Clause](https://github.com/ayllon/elements-feedstock/blob/master/LICENSE.txt)
+Feedstock license: [BSD-3-Clause](https://github.com/astrorama/elements-feedstock/blob/master/LICENSE.txt)
 
 Summary: Elements is a C++/Python build framework. It helps to organize the software into modules which are gathered into projects.
 
@@ -16,8 +16,8 @@ Current build status
 <table><tr>
     <td>Travis</td>
     <td>
-      <a href="https://travis-ci.com/ayllon/elements-feedstock">
-        <img alt="macOS" src="https://img.shields.io/travis/com/ayllon/elements-feedstock/master.svg?label=macOS">
+      <a href="https://travis-ci.com/astrorama/elements-feedstock">
+        <img alt="macOS" src="https://img.shields.io/travis/com/astrorama/elements-feedstock/master.svg?label=macOS">
       </a>
     </td>
   </tr>
@@ -27,8 +27,8 @@ Current build status
     <td>
       <details>
         <summary>
-          <a href="https://dev.azure.com/ayllon/feedstock-builds/_build/latest?definitionId=1&branchName=master">
-            <img src="https://dev.azure.com/ayllon/feedstock-builds/_apis/build/status/elements-feedstock?branchName=master">
+          <a href="https://dev.azure.com/astrorama/feedstock-builds/_build/latest?definitionId=1&branchName=master">
+            <img src="https://dev.azure.com/astrorama/feedstock-builds/_apis/build/status/elements-feedstock?branchName=master">
           </a>
         </summary>
         <table>
@@ -36,29 +36,29 @@ Current build status
           <tbody><tr>
               <td>linux_64_python3.7.____cpython</td>
               <td>
-                <a href="https://dev.azure.com/ayllon/feedstock-builds/_build/latest?definitionId=1&branchName=master">
-                  <img src="https://dev.azure.com/ayllon/feedstock-builds/_apis/build/status/elements-feedstock?branchName=master&jobName=linux&configuration=linux_64_python3.7.____cpython" alt="variant">
+                <a href="https://dev.azure.com/astrorama/feedstock-builds/_build/latest?definitionId=1&branchName=master">
+                  <img src="https://dev.azure.com/astrorama/feedstock-builds/_apis/build/status/elements-feedstock?branchName=master&jobName=linux&configuration=linux_64_python3.7.____cpython" alt="variant">
                 </a>
               </td>
             </tr><tr>
               <td>linux_64_python3.8.____cpython</td>
               <td>
-                <a href="https://dev.azure.com/ayllon/feedstock-builds/_build/latest?definitionId=1&branchName=master">
-                  <img src="https://dev.azure.com/ayllon/feedstock-builds/_apis/build/status/elements-feedstock?branchName=master&jobName=linux&configuration=linux_64_python3.8.____cpython" alt="variant">
+                <a href="https://dev.azure.com/astrorama/feedstock-builds/_build/latest?definitionId=1&branchName=master">
+                  <img src="https://dev.azure.com/astrorama/feedstock-builds/_apis/build/status/elements-feedstock?branchName=master&jobName=linux&configuration=linux_64_python3.8.____cpython" alt="variant">
                 </a>
               </td>
             </tr><tr>
               <td>osx_64_python3.7.____cpython</td>
               <td>
-                <a href="https://dev.azure.com/ayllon/feedstock-builds/_build/latest?definitionId=1&branchName=master">
-                  <img src="https://dev.azure.com/ayllon/feedstock-builds/_apis/build/status/elements-feedstock?branchName=master&jobName=osx&configuration=osx_64_python3.7.____cpython" alt="variant">
+                <a href="https://dev.azure.com/astrorama/feedstock-builds/_build/latest?definitionId=1&branchName=master">
+                  <img src="https://dev.azure.com/astrorama/feedstock-builds/_apis/build/status/elements-feedstock?branchName=master&jobName=osx&configuration=osx_64_python3.7.____cpython" alt="variant">
                 </a>
               </td>
             </tr><tr>
               <td>osx_64_python3.8.____cpython</td>
               <td>
-                <a href="https://dev.azure.com/ayllon/feedstock-builds/_build/latest?definitionId=1&branchName=master">
-                  <img src="https://dev.azure.com/ayllon/feedstock-builds/_apis/build/status/elements-feedstock?branchName=master&jobName=osx&configuration=osx_64_python3.8.____cpython" alt="variant">
+                <a href="https://dev.azure.com/astrorama/feedstock-builds/_build/latest?definitionId=1&branchName=master">
+                  <img src="https://dev.azure.com/astrorama/feedstock-builds/_apis/build/status/elements-feedstock?branchName=master&jobName=osx&configuration=osx_64_python3.8.____cpython" alt="variant">
                 </a>
               </td>
             </tr>
@@ -110,7 +110,7 @@ opportunity to confirm that the changes result in a successful build. Once
 merged, the recipe will be re-built and uploaded automatically to the
 `astrorama` channel, whereupon the built conda packages will be available for
 everybody to install and use from the `astrorama` channel.
-Note that all branches in the ayllon/elements-feedstock are
+Note that all branches in the astrorama/elements-feedstock are
 immediately built and any created packages are uploaded, so PRs should be based
 on branches in forks and branches in the main repository should only be used to
 build distinct package versions.
