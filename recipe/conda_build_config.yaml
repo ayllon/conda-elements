@@ -1,3 +1,6 @@
+channel_sources:
+  - astrorama,conda-forge,defaults
+
 channel_targets:
   - astrorama main
 
