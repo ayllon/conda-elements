@@ -1,6 +1,6 @@
 {% set name = "Elements" %}
 {% set version = "5.12" %}
-{% set build_number = 3 %}
+{% set build_number = 4 %}
 
 package:
     name: {{ name|lower }} 
@@ -33,8 +33,6 @@ requirements:
         - boost-cpp
         - log4cpp >=1.1.3
     run:
-        - {{ pin_compatible(compiler('cxx'), min_pin='x.x', max_pin='x.x') }}
-        - {{ pin_compatible('python', min_pin='x.x', max_pin='x.x') }}
         - {{ pin_compatible('boost-cpp', min_pin='x.x', max_pin='x.x') }}
         - {{ pin_compatible('log4cpp') }}
 
