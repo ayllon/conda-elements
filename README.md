@@ -90,6 +90,7 @@ Installing `elements` from the `astrorama` channel can be achieved by adding `as
 
 ```
 conda config --add channels astrorama
+conda config --set channel_priority strict
 ```
 
 Once the `astrorama` channel has been enabled, `elements` can be installed with:
