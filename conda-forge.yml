@@ -13,7 +13,7 @@ test_on_native_only: true
 provider:
   linux: azure
   osx: azure
-  win: azure
+  win: None
 
 azure:
   store_build_artifacts: False
